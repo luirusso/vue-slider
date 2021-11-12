@@ -34,8 +34,12 @@
             <!-- Thumbnails -->
             <div class="thumbs">
                 <!-- genera con vue  -->
-                <div class="thumb active">
-                    <img src="./img/01.jpg" alt="Lorem">
+                <div 
+                v-for="(slide, index) in slides" 
+                class="thumb"
+                :class="{active: index === activeSlide}"
+                >
+                    <img :src="slide.image" alt="Lorem">
                 </div>
     
                 <div class="prev">&uarr;</div>
