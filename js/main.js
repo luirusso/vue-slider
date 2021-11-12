@@ -60,8 +60,6 @@ const app = new Vue({
                 this.activeSlide = 0;
             };
         }, 3000);
-
-
     },
     methods: {
 
