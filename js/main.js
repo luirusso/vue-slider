@@ -48,6 +48,9 @@ const app = new Vue({
         ],
         activeSlide: 0,
     },
+    created() {
+
+    },
     methods: {
         /**
          * Previous slide
@@ -61,12 +64,24 @@ const app = new Vue({
             };
         },
 
+        /**
+         * Next slide
+         */
+
         nextSlide() {
             this.activeSlide++;
 
             if(this.activeSlide > this.slides.length - 1) {
                 this.activeSlide = 0;
             };
-        }
+        },
+
+        /**
+         * Set slide on click
+         */
+
+        slideClick(slideIndex) {
+            this.activeSlide = slideIndex;
+        }, 
     },
 });
