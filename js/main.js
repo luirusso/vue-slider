@@ -48,4 +48,25 @@ const app = new Vue({
         ],
         activeSlide: 0,
     },
-})
+    methods: {
+        /**
+         * Previous slide
+         */
+
+        prevSlide() {
+            this.activeSlide--;
+
+            if(this.activeSlide < 0) {
+                this.activeSlide = this.slides.length - 1;
+            };
+        },
+
+        nextSlide() {
+            this.activeSlide++;
+
+            if(this.activeSlide > this.slides.length - 1) {
+                this.activeSlide = 0;
+            };
+        }
+    },
+});

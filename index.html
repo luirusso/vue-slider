@@ -39,11 +39,11 @@
                 class="thumb"
                 :class="{active: index === activeSlide}"
                 >
-                    <img :src="slide.image" alt="Lorem">
+                    <img :src="slide.image" :alt="slide.title">
                 </div>
     
-                <div class="prev">&uarr;</div>
-                <div class="next">&darr;</div>
+                <div class="prev" @click="prevSlide">&uarr;</div>
+                <div class="next" @click="nextSlide">&darr;</div>
             </div>
         </section>
     </div>
