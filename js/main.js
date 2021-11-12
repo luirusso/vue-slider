@@ -55,10 +55,7 @@ const app = new Vue({
          */
         
         setInterval(() => {
-            this.activeSlide++;
-            if(this.activeSlide > this.slides.length - 1) {
-                this.activeSlide = 0;
-            };
+            this.nextSlide();
         }, 3000);
     },
     methods: {
