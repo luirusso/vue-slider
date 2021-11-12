@@ -49,9 +49,22 @@ const app = new Vue({
         activeSlide: 0,
     },
     created() {
+        
+        /**
+         * Changing slide every 3 seconds
+         */
+        
+        setInterval(() => {
+            this.activeSlide++;
+            if(this.activeSlide > this.slides.length - 1) {
+                this.activeSlide = 0;
+            };
+        }, 3000);
+
 
     },
     methods: {
+
         /**
          * Previous slide
          */
